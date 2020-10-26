@@ -3,37 +3,43 @@ import ReactDom from 'react-dom';
 
 import './index.css';
 
-const title = 'Gideon the Ninth (The Locked Tomb Trilogy, 1)';
-const author = 'Tamsyn Muir';
-const image = 'https://images-na.ssl-images-amazon.com/images/I/61D4TGMD4fL._AC_UL320_SR214,320_.jpg';
-
-const secondBook = {
-  title: 'The Rage of Dragons (The Burning (1))',
-  author: 'Evan Winter',
-  image: 'https://images-na.ssl-images-amazon.com/images/I/511Y+VFzgoL._SX322_BO1,204,203,200_.jpg'
-}
+const books = [{ id: 1, title: 'Gideon the Ninth (The Locked Tomb Trilogy, 1)',author: 'Tamsyn Muir', image: 'https://images-na.ssl-images-amazon.com/images/I/61D4TGMD4fL._AC_UL320_SR214,320_.jpg'}, { id:2, title: 'The Rage of Dragons (The Burning (1))', author: 'Evan Winter', image: 'https://images-na.ssl-images-amazon.com/images/I/511Y+VFzgoL._SX322_BO1,204,203,200_.jpg'
+}];
 
 
 function BookList() {
   return (
     <section className="booklist">
-      <Book img={image} title={title} author={author} />
-      <Book img={secondBook.image} title={secondBook.title} author={secondBook.author}/>
-      <Book>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed officia quae fugiat reprehenderit iusto. Adipisci provident, minus nisi vitae eius voluptatum molestiae aperiam consectetur placeat.</p>
-      </Book>
+      { books.map( book => {        
+        return (
+          // using spread operator
+          <Book {...book} key={book.id}>
+          </Book>
+        )
+      })}
     </section>
   );
 }
 
 const Book = (props) => {
-  const { img, title, author, children} = props;
+  const { image, title, author} = props;
+
+  const clickHandler = () => {
+    alert('Whats cracking');
+  };
+
+  const clickComplex = (author) => {
+    alert(author);
+  }
+
   return (
-    <article className="book">
-      <img src={img} alt={title}/>
-      <h1>{title}</h1>
+    <article className="book" onMouseOver={() => console.log(title)}>
+      <img src={image} alt={title}/>
+      <h1 onClick={() => console.log(title)}>{title}</h1>
       <h4 style={{color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem'}}>{author}</h4>
-      { children }
+      <button type="button" onClick={clickHandler} title="Click me">Click me</button>
+      {/* if need to pass values have to do it this way */}
+      <button type="button" onClick={() => clickComplex(author)}>more complex button</button>
     </article>
   )
 };
