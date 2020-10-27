@@ -1,0 +1,2 @@
+export const books = [{ id: 1, title: 'Gideon the Ninth (The Locked Tomb Trilogy, 1)',author: 'Tamsyn Muir', image: 'https://images-na.ssl-images-amazon.com/images/I/61D4TGMD4fL._AC_UL320_SR214,320_.jpg'}, { id:2, title: 'The Rage of Dragons (The Burning (1))', author: 'Evan Winter', image: 'https://images-na.ssl-images-amazon.com/images/I/511Y+VFzgoL._SX322_BO1,204,203,200_.jpg'
+}];
