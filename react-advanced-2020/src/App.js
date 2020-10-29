@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SetUp from './tutorial/2-useEffect/1-useEffect-basics';
+import SetUp from './tutorial/3-conditional-rendering/3-show-hide';
 
 function App() {
   
