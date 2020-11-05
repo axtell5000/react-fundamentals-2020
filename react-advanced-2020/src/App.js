@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SetUp from './tutorial/3-conditional-rendering/3-show-hide';
+import SetUp from './tutorial/4-forms/2-multiple-inputs';
 
 function App() {
   
