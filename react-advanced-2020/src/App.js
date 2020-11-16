@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SetUp from './tutorial/9-custom-hooks/1-fetch-example';
+import SetUp from './tutorial/10-prop-types/index';
 
 function App() {
   
