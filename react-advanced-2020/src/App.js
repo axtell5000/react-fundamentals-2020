@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SetUp from './tutorial/8-useContext/1-context-api';
+import SetUp from './tutorial/9-custom-hooks/1-fetch-example';
 
 function App() {
   
