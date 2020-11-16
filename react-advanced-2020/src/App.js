@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SetUp from './tutorial/6-useReducer/';
+import SetUp from './tutorial/8-useContext/1-context-api';
 
 function App() {
   
