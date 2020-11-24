@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { useFetch } from '../../9-custom-hooks/final/2-useFetch';
+import { useFetch } from '../9-custom-hooks/2-useFetch';
 
 const url = 'https://course-api.netlify.app/api/javascript-store-products';
+// A BIG NOTE - Just remember to kepp a look out for things re-rendering unnecessarily when state / prop changes
 // every time props or state changes, component re-renders
 const calculateMostExpensive = (data) => {
   console.log('hello ');
